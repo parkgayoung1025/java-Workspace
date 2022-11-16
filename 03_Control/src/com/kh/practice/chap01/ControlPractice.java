@@ -17,45 +17,123 @@ public class ControlPractice {
 		System.out.println("3. 조회");
 		System.out.println("4. 삭제");
 		System.out.println("7. 종료");
-		
 		System.out.print("메뉴 번호를 입력하세요 : ");
 		int num = sc.nextInt();
 		
-		if(num) {
-			System.out.println("메뉴입니다.");
+		String result = "";
+		
+		switch(num) {
+		case 1: result = "입력";
+				break;
+		case 2: result = "수정";
+				break;
+		case 3: result = "조회";
+				break;
+		case 4: result = "삭제";
+				break;
+		case 7: result = "종료";
+				break;
 		}
-		
-		
+		if(result.equals("종료")) {
+			System.out.print("프로그램이 종료됩니다.");
+		}else {
+			System.out.print(result+" 메뉴입니다");
+		}
 	}
 	
 	public void practice2() {
 		
 		/*
-		 * 키보드로 정수를 입력 받은 정수가 양수이면서 짝수일 때만 “짝수다”를 출력하고 짝수가 아니면 “홀수다“를 출력하세요. 양수가 아니면
-		 * “양수만 입력해주세요.”를 출력하세요. ex. 숫자를 한 개 입력하세요 : -8 양수만 입력해주세요.
+		 * 키보드로 정수를 입력받은 정수가 양수이면서 짝수일 때만 “짝수다”를 출력하고 짝수가 아니면 “홀수다“를 출력하세요. 양수가 아니면
+		 * “양수만 입력해 주세요.”를 출력하세요. ex. 숫자를 한 개 입력하세요 : -8 양수만 입력해 주세요.
 		 */
-
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("숫자를 한 개 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		if(num>0) {
+			if(num % 2 == 0) {
+				System.out.print("짝수다");
+			}else {
+				System.out.print("홀수다");
+			}
+		}else {
+			System.out.print("양수만 입력해 주세요.");
+		}
 	}
 	
 	public void practice3() {
 		/*
-		 * 국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고 합계와 평균을 이용하여 합격 / 불합격 처리하는 기능을
-		 * 구현하세요. (합격 조건 : 세 과목의 점수가 각각 40점 이상이면서 평균이 60점 이상일 경우) 합격 했을 경우 과목 별 점수와 합계,
-		 * 평균, “축하합니다, 합격입니다!”를 출력하고 불합격인 경우에는 “불합격입니다.”를 출력하세요.
+		 * 국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고 합계와 평균을 이용하여 합격 / 불합격 처리하는 기능을 구현하세요. 
+		 * (합격 조건 : 세 과목의 점수가 각각 40점 이상이면서 평균이 60점 이상일 경우) 
+		 * 합격 했을 경우 과목 별 점수와 합계, 평균, “축하합니다, 합격입니다!”를 출력하고 불합격인 경우에는 “불합격입니다.”를 출력하세요.
+		 * ex 1.                   ex 2.
+		 * 국어점수 : 88             국어점수 : 88
+		 * 수학점수 : 50			   수학점수 : 50
+		 * 영어점수 : 40			   영어점수 : 45
+		 * 불합격입니다.			   국어 : 88
+		 * 						   수학 : 50
+		 * 						   영어 : 45
+		 * 						   합계 : 183
+		 * 						   평균 : 61.0
+		 * 						   축하합니다, 합격입니다!
 		 */
-		/*
-		 * ex 1. ex 2. 국어점수 : 88 국어점수 : 88 수학점수 : 50 수학점수 : 50 영어점수 : 40 영어점수 : 45
-		 * 불합격입니다. 국어 : 88 수학 : 50 영어 : 45 합계 : 183 평균 : 61.0 축하합니다, 합격입니다!
-		 */
-
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("국어점수 : ");
+		int kor = sc.nextInt();
+		
+		System.out.print("수학점수 : ");
+		int math = sc.nextInt();
+		
+		System.out.print("영어점수 : ");
+		int eng = sc.nextInt();
+		
+		int sum = kor+math+eng;
+		double avg = sum/3;
+		
+		if(kor>=40 && math>=40 && eng>=40 && avg>=60) {
+			System.out.println("국어 : "+kor);
+			System.out.println("수학 : "+math);
+			System.out.println("영어 : "+eng);
+			System.out.println("합계 : "+sum);
+			System.out.println("평균 : "+avg);
+			System.out.print("축하합니다, 합격입니다!");
+		}else {
+			System.out.print("불합격입니다.");
+		}
 	}
 	
 	public void practice4() {
 		
 		/*
-		 * 제어문 pdf 파일(if~else if~else문 예시)에서 if문으로 되어있는 봄, 여름, 가을, 겨울 예제를 switch문으로 바꿔서 출력하세 요. ex 1.
-		 * 1~12 사이의 정수 입력 : 8 8월은 여름입니다. ex 2. 1~12 사이의 정수 입력 : 99 99월은 잘못 입력된 달입니다.
+		 * 제어문 pdf 파일(if~else if~else문 예시)에서 if문으로 되어있는 봄, 여름, 가을, 겨울 예제를 switch문으로 바꿔서 출력하세 요. 
+		 * ex 1.                              ex 2.
+		 * 1~12 사이의 정수 입력 : 8 			  1~12 사이의 정수 입력 : 99
+		 * 8월은 여름입니다. 					  99월은 잘못 입력된 달입니다.
 		 */
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("1~12 사이의 정수 입력 : ");
+		int month = sc.nextInt();
+		
+		switch(month) {
+		case1 : 
+		case2 : 
+		case12 : 겨울
+		case3 : 
+		case4 : 
+		case5 : 봄
+		case6 : 
+		case7 : 
+		case8 : 여름
+		case9 : 
+		case10 : 가을
+		case11 : 
+										
+							
+		}
 
 	}
 	

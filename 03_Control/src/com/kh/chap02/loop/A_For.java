@@ -1,4 +1,4 @@
-package com.kh.practice.chap02.loop;
+package com.kh.chap02.loop;
 
 import java.util.Scanner;
 
@@ -231,8 +231,82 @@ public class A_For {
 		// 사용자가 입력한 단을 출력
 		// 단수가 2단 ~ 9단까지의 범위가 아니라면 잘못입력했습니다(2~9사이의 정수 입력)
 		// 제대로 입력했다면 해당 단수를 출력
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("단 수(2~9) 입력 : ");
+		int dan = sc.nextInt();
 		
+		if(dan >= 2 && dan <= 9) {
+			for(int i=1; i<=9; i++) {
+				System.out.printf("%d X %d = %d \n", dan, i, (dan*i));
+			}
+		}else {
+			System.out.println("잘못입력했습니다. (2~9사이의 정수 입력)");
+		}
+	}
+	
+	//중첩 반복문
+	public void method12() {
+		// 1 ~ 5까지 연이어서 출력
+		// 1 2 3 4 5가 출력되도록 반목문
+		for(int i=1; i<=3; i++) {
+			for(int j=1; j<=5; j++) { // i , j , k
+				System.out.print(j+" ");
+				//1 2 3 4 5
+			}
+		}
+		System.out.println();
+	}
+	
+	public void method13() {
+		//****
+		//****
+		//****
+		//****
+		//중첩 반복문으로 출력해보기
+		for(int i=0; i<4; i++) {
+			//****\n
+			for(int j=0; j<4; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method14() {
+		//1***\n => 1행 1열 때 -> 숫자1표시
+		//*2**\n => 2행 2열 때 -> 숫자2표시
+		//**3*\n => 3행 3열 때 -> 숫자3표시
+		//***4\n => 4행 4열 때 -> 숫자4표시
+		for(int i=1; i<5; i++) {
+			for(int j=1; j<5; j++) {
+				if(i == j) {
+					System.out.print(i);
+				}else {
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method15() {
+		// 2단부터 ~ 9단까지 모두 출력
+		
+		int dan = 2;
+		
+//		System.out.printf("--- %d 단 --- \n", dan);
+//		for(int i=1; i<=9; i++) {
+//			System.out.printf("%d X %d = %d \n", dan, i, dan * i);
+//		}
+		
+		for(; dan <=9; dan++) {
+			System.out.printf("--- %d 단 --- \n", dan);
+			for(int i=1; i<=9; i++) {
+				System.out.printf("%d X %d = %d \n", dan, i, dan * i);
+			}
+			System.out.println();
+		}
 	}
 
 }
