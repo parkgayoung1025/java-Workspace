@@ -172,8 +172,18 @@ public class C_DimensionalArray {
 		
 		for(int i=0; i<arr.length; i++) {
 			for(int j=0; j<arr[i].length; j++) {
+				System.out.printf("%s 점수를 입력하세요 : ", i == 0 ? "국어" : "영어");
+				arr[i][j] = sc.nextInt();
 			}
 		}
+		for(int i=0; i<arr.length; i++) {
+			System.out.printf("%s 점수 : ", i == 0 ? "국어" : "영어");
+			for(int j=0; j<arr[i].length; j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
 		
 			
 			

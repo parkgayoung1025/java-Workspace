@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ControlPractice {
 	
+	java.util.Scanner sc = new java.util.Scanner(System.in);
+	
 	public void practice1() {
 		
 		/*
@@ -119,31 +121,50 @@ public class ControlPractice {
 		int month = sc.nextInt();
 		
 		switch(month) {
-		case1 : 
-		case2 : 
-		case12 : 겨울
-		case3 : 
-		case4 : 
-		case5 : 봄
-		case6 : 
-		case7 : 
-		case8 : 여름
-		case9 : 
-		case10 : 가을
-		case11 : 
-										
-							
+		case 1 : 
+		case 2 : 
+		case 12 : System.out.println(month+"월은 겨울입니다.");
+				break;
+		case 3 : 
+		case 4 : 
+		case 5 : System.out.println(month+"월은 봄입니다.");
+				break;
+		case 6 : 
+		case 7 : 
+		case 8 : System.out.println(month+"월은 여름입니다.");
+				break;
+		case 9 : 
+		case 10 : 
+		case 11 : System.out.println(month+"월은 가을입니다.");
+				break;
+		default : System.out.println(month+"월은 잘못 입력된 달입니다.");
 		}
-
 	}
 	
 	public void practice5() {
 		/*
 		 * 아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요. 로그인 성공 시 “로그인 성공”, 아이디가 틀렸을 시 “아이디가 틀렸습니다.“,
-		 * 비밀번호가 틀렸을 시 “비밀번호가 틀렸습니다.”를 출력하세요. ex 1. ex 2. ex 3. 아이디 : minmin 아이디 :
-		 * minmin 아이디 : min 비밀번호 : Min1234 비밀번호 : min1234 비밀번호 : Min1234 로그인 성공 비밀번호가
+		 * 비밀번호가 틀렸을 시 “비밀번호가 틀렸습니다.”를 출력하세요. 
+		 * ex 1.               ex 2.             ex 3. 
+		 * 아이디 : minmin       아이디 :
+		 *                     minmin 아이디 : min 비밀번호 : Min1234 비밀번호 : min1234 비밀번호 : Min1234 로그인 성공 비밀번호가
 		 * 틀렸습니다. 아이디가 틀렸습니다.
 		 */
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		
+		System.out.print("비밀번호 : ");
+		String pwd = sc.nextLine();
+		
+		if(id.equals("minmin")) {
+			if(pwd.equals("Min1234")) {
+				System.out.println("로그인 성공");
+			}else {
+				System.out.println("비밀번호가 틀렸습니다.");
+			}
+		}else {
+			System.out.println("아이디가 틀렸습니다");
+		}
 	}
 	
 	public void practice6() {
