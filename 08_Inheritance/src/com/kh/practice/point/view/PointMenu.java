@@ -29,8 +29,8 @@ public class PointMenu {
 				break;
 			case 9:
 				System.out.println("종료합니다");
-			default:
 				return;
+			default:
 			}
 		}
 	}
@@ -52,10 +52,10 @@ public class PointMenu {
 			case 2:
 				calcCircleArea();
 				break;
-			case 9:System.out.println();
+			case 9:
 			default:
 				return;
-				
+
 			}
 		}
 
@@ -78,7 +78,7 @@ public class PointMenu {
 			case 2:
 				calcRectArea();
 				break;
-			case 9:System.out.println();
+			case 9:
 			default:
 				return;
 			}
