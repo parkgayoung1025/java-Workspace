@@ -92,21 +92,26 @@ public class ShapeMenu {
 			if(menuNum == 1) {
 				System.out.print("높이 : ");
 				int height = sc.nextInt();
+				
 				System.out.print("너비 : ");
 				int width = sc.nextInt();
+				
 				System.out.print("삼각형의 면적 : ");
 				d = tc.calcArea(height, width);
 				System.out.println(d);
 			}else {
 				sc.nextLine();
+				
 				System.out.print("색깔을 입력하세요 : ");
 				String color = sc.nextLine();
+				
 				tc.paintColor(color);
 				System.out.println("색이 수정되었습니다.");
 			}
 		}else {
 			if(menuNum == 3) {
 				sc.nextLine();
+				
 				System.out.print("색깔을 입력하세요 : ");
 				String color = sc.nextLine();
 				scr.paintColor(color);
@@ -114,8 +119,10 @@ public class ShapeMenu {
 			}else {
 				System.out.print("높이 : ");
 				int height = sc.nextInt();
+				
 				System.out.print("너비 : ");
 				int width = sc.nextInt();
+				
 				if(menuNum == 1) {
 					System.out.print("사각형의 둘레 : ");
 					d = scr.calcPerimeter(height, width);
