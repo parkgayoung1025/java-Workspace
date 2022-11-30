@@ -1,7 +1,7 @@
 package com.kh.practice.chap02_abstractNinterface.model.vo;
 
-public interface CellPhone extends Phone {
+public interface CellPhone extends Camera, Phone {
 	
-	public String charge();
+	String charge();
 
 }

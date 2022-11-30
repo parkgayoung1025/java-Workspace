@@ -1,26 +1,21 @@
 package com.kh.practice.chap02_abstractNinterface.model.vo;
 
-public class SmartPhone implements CellPhone {
+public abstract class SmartPhone implements CellPhone, TouchDisplay {
 	
-	private String maker;
+	private String maker; // 제조사 정보
 
 	public SmartPhone() {
-		super();
-	}
-	
-	public String printlnformation() {
 		
 	}
+	
+	public abstract String printlnformation();
 	
 	public void setMaker(String maker) {
-		
+		this.maker = maker;
 	}
 	
 	public String getMaker() {
-		
+		return maker;
 	}
 	
-	
-	
-
 }
