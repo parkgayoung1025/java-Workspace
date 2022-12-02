@@ -1,7 +1,7 @@
 package com.kh.practice3.model.vo;
 
 public class Cat extends Animal {
-	
+
 	String location;
 	String color;
 
@@ -33,7 +33,7 @@ public class Cat extends Animal {
 
 	@Override
 	public void speak() {
-		
+		System.out.println(super.toString() + location + "에 서식하며, 색상은" + color + "입니다.");
 	}
 
 }

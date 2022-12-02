@@ -18,9 +18,9 @@ public class BufferedDao {
 //		BufferedWriter bw = null;
 
 //		try {
-//			/*
-//			 * 1. 기반 스트림(FileWriter) 객체 먼저 생성 보조 스트림도 Reader / Writer 계열이면 기반 스트림도 Reader /
-//			 * Writer 보조 스트림도 Input / Output 계열이면 기반 스트림도 Input / Output
+/*//		/*
+//			 * 1. 기반 스트림(FileWriter) 객체 먼저 생성 보조 스트림도 Reader / Writer 계열이면 기반 스트림도 Reader / Writer 
+		     *    보조 스트림도 Input / Output 계열이면 기반 스트림도 Input / Output
 //			 */
 //			bw = new BufferedWriter(new FileWriter("c_buffer.txt"));
 //
