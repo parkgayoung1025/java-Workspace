@@ -74,7 +74,7 @@ public class A_UncheckedException {
 	
 	public void method3() {
 		// ArrayIndexOutOfBoundsException : 배열의 부적절한 인덱스로 접근시 발생하는 예외
-		// NegativeArraySizeException : 배열의 킈를 음수로 지정할 경우 발생하는 예외
+		// NegativeArraySizeException : 배열의 크기를 음수로 지정할 경우 발생하는 예외
 		
 		System.out.print("배열의 크기 : ");
 		int size = Integer.parseInt(sc.nextLine());

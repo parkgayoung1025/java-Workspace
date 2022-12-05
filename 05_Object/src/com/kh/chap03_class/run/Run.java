@@ -5,7 +5,6 @@ import com.kh.chap03_class.model.vo.*;
 public class Run {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Product p1 = new Product();
 		
 		p1.setpName("아이폰 14");

@@ -20,7 +20,6 @@ public class Run {
 	 */
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Student hong = new Student();
 //		hong.name = "홍길동"; // the filed Student.name is not visible

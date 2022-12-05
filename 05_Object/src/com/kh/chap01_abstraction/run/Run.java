@@ -62,7 +62,6 @@ public class Run {
 	
 	//Student 클래스 생성해 보기
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		// 1. Student 클래스 만들고 나서 객체 생성
 		// 홍길동 학생 객체 만들기
